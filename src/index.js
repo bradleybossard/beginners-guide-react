@@ -6,6 +6,10 @@ const rootElement = document.getElementById("root");
 
 const content = "Hello World";
 const myClassName = "container";
+const props = {
+  className: "container",
+  children: content
+};
 
-const element = <div className={myClassName}>{content}</div>;
+const element = <div {...props} />;
 ReactDom.render(element, rootElement);
