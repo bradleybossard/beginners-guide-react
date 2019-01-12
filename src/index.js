@@ -5,6 +5,7 @@ import ReactDom from "react-dom";
 const rootElement = document.getElementById("root");
 
 const content = "Hello World";
+const myClassName = "container";
 
-const element = <div className="container">{content}</div>;
+const element = <div className={myClassName}>{content}</div>;
 ReactDom.render(element, rootElement);
