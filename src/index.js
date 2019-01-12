@@ -11,13 +11,13 @@ const props = {
   children: content
 };
 
-const message = props => <div>{props.msg}</div>;
+const Message = props => <div>{props.children}</div>;
 
 //const element = <div {...props} />;
 const element = (
   <div className="container">
-    {message({ msg: "Hello World" })}
-    {message({ msg: "Goodbye World" })}
+    <Message>Hello World</Message>
+    <Message>Goodbye World</Message>
   </div>
 );
 ReactDom.render(element, rootElement);
