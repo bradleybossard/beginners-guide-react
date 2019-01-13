@@ -32,3 +32,12 @@ const element = (
   </div>
 );
 ReactDom.render(element, rootElement);
+
+const tick = () => {
+  const time = Date().toLocaleString();
+  console.log(time);
+  const timeElement = <div>Time is {time}</div>;
+  ReactDom.render(timeElement, rootElement);
+};
+
+setInterval(tick, 200);
